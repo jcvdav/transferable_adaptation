@@ -1,0 +1,26 @@
+Case Code,AR,Domain,Country,Resource Units,Resource System,Governance System,Users,Lat,Lon
+1_a_MEX,1,a,MEX,Sea Urchin,El Rosario/Rocky Reef,TURFs/Co-ops,SSFs from cooperatives,30.05,-115.72
+1_d_MEX,1,d,MEX,Queen conch,Banco Chinchorro,TURFs,SSFs,18.72,-87.7
+2_a_URY,2,a,URY,Yellow Clam,Coastal Sandbar,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+2_a_ECU,2,a,ECU,Spiny lobster,Galapagos Islands,Managed Fishery (generalist permit),Generalist fishers (freediving and hookah),-0.26,-91.03
+2_b_ECU,2,b,ECU,General fishing,Galapagos Islands,Co-managed rotational fisheries,SSFs and boat owners from co-ops,-0.26,-91.03
+2_b_MEX,2,b,MEX,Spiny Lobster,Maria Elena and Punta Herrero,TURFs,Lobster fishers,19.31,-97.46
+2_c_PER,2,c,PER,Squid,La islilla,OSPA,Fishers and Processors,-5.21,-81.19
+3_c_MEX,3,c,MEX,General fishing,Mexico Fisheries,Federal Agency,Women Fishers,19.39,-99.14
+4_a_MEX,a,a,MEX,Benthic invertebrates,Isla Natividad,TURFs,SSFs,27.87,-115.2
+5_a_PER,5,a,PER,Demersal finfish,La Isililla,OSPA,SSFs,-5.21,-81.19
+5_a_URY,5,a,URY,Yellow Clam,Coastal Sandbar,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+5_c_MEX,5,c,MEX,Bivalves/Finfish/Elasmobranchs,Puerto Libertad,Community-based management,SSFs,29.9,-112.73
+5_c_PER,5,c,PER,General fishing,La Isiliia,OSPAs & voluntary patrols,SSFs,-5.21,-81.19
+5_c_PER_2,5,c,PER,General fishing,La Isiliia,OSPAs & spatial gear control,SSFs,-5.21,-81.19
+5_d_ECU,5,d,ECU,Brown sea cucumber,Galapagos Islands,Co-managed no-take reserves,SSFs,-0.26,-91.03
+6_a_URY,6,a,URY,Yellow clam,Coastal Sandbar,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+6_b_PER,6,b,PER,General fishing,Ancon,OSPAs,SSFs,-11.69,-77.19
+7_a_MEX,7,a,MEX,Benthic invertebrates,Isla Natividad,TURFs,SSFs,27.87,-115.2
+7_b_MEX,7,b,MEX,Benthic invertebrates,El Rosario,TURFs,SSFs,30.05,-115.72
+7_c_CHL,7,c,CHL,Tunicates/Bivalves/Macroalgae,Small-scale aquaculture,TURFs,SSFs,-33.47,-70.95
+9_c_MEX,9,c,MEX,General fishing,Baja California,TURFs and Co-ops,SSFs,27.84,-115.1
+9_c_PER,9,c,PER,General fishing,Peruvian fishing communities,OSPA,SSFs,,
+10_a_URY,10,a,URY,Yellow clam,Coastal Sandbar,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+10_b_ECU,10,b,ECU,Spiny Lobster,Galapagos Islands,Government-managed reserve,SSFs,-0.26,-91.03
+10_b_ECU_2,10,b,ECU,General fishing,Santa Cruz Island,Fishing co-ops and trade associations,SSFs,-0.53,-90.37
