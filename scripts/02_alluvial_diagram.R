@@ -26,15 +26,19 @@ data <- read_csv(here("data","cases_master_sheet.csv")) %>%
   mutate(case_code = str_replace_all(case_code, "-", "_"),
          ar = as.numeric(str_extract(case_code, "[:digit:]+")),
          domain = str_extract(str_extract(case_code, "_[abcd]_"), "[:alpha:]"),
-         country = str_remove_all(case_code, pattern = paste("_|[:digit:]+", ar, domain, sep = "|"))) %>% 
+         country = str_remove_all(case_code, pattern = paste("_|[:digit:]+", ar, domain, sep = "|")),
+         country = case_when(country == "CHL" ~ "Chile",
+                             country == "URY" ~ "Uruguay",
+                             country == "ECU" ~ "Ecuador",
+                             country == "PER" ~ "Peru",
+                             country == "MEX" ~ "Mexico")) %>% 
   mutate(domain = case_when(domain == "a" ~ "Environmental",
                             domain == "b" ~ "Market",
                             domain == "c" ~ "Institutional",
                             domain == "d" ~ "Social",
                             T ~ "missing")) %>% 
-  mutate(ar_a = paste0("AR", ar),
-         ar_a = fct_reorder(ar_a, ar, .fun = "max"),) %>% 
-  group_by(ar_a, domain, country) %>% 
+  mutate(ar_a = paste0("AR", ar)) %>% 
+  group_by(ar_a, ar, domain, country) %>% 
   count() %>% 
   ungroup() %>% 
   
@@ -48,6 +52,7 @@ data <- read_csv(here("data","cases_master_sheet.csv")) %>%
   ungroup() %>% 
   mutate(domain = paste0(domain, " (n = ", n_domain, ")"),
          ar_a = paste0(ar_a, " (n = ", n_ar, ")"),
+         ar_a = fct_reorder(ar_a, ar, .fun = "max"),
          country = paste0(country, " (n = ", n_country, ")")) %>% 
   ###
    
@@ -55,7 +60,7 @@ data <- read_csv(here("data","cases_master_sheet.csv")) %>%
          country = fct_reorder(country, n, .fun = "sum")) %>% 
   mutate(pct = n / sum(n))
 
-## PROCESSING ##################################################################
+## VISUALIZE ###################################################################
 
 # X ----------------------------------------------------------------------------
 ggplot(data = data,
@@ -72,7 +77,7 @@ ggplot(data = data,
             aes(label = after_stat(stratum)),
             size = 3) +
   labs(x = "",
-       y = "Proportion of cases",
+       y = "Percent of cases",
        fill = "Domain") +
   scale_x_discrete(limits = c("Domain", "Adaptive Response", "Country"), expand = c(0, 0)) +
   scale_y_continuous(labels = scales::percent, expand = c(0, 0)) +
@@ -82,9 +87,6 @@ ggplot(data = data,
         legend.title.position = "top",
         legend.box.spacing = unit(0, "pt"))
 
-## VISUALIZE ###################################################################
-
-# X ----------------------------------------------------------------------------
 
 ## EXPORT ######################################################################
 
