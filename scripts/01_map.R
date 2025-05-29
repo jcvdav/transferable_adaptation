@@ -25,7 +25,7 @@ pacman::p_load(
 sf_use_s2(F)
 
 # Load data --------------------------------------------------------------------
-world <- ne_countries(returnclass = "sf")
+world <- ne_countries(returnclass = "sf", scale = "medium")
 
 
 continent <- world %>% 
@@ -42,8 +42,6 @@ countries <- world %>%
                        "URY"))
 
 pts <- read_csv(here("data", "cases_master_sheet.csv")) %>% 
-  replace_na(replace = list(Lon = -40,
-                            Lat = 20)) %>% 
   st_as_sf(coords = c("Lon", "Lat"),
            crs = 4326)
 
@@ -59,10 +57,12 @@ pts <- read_csv(here("data", "cases_master_sheet.csv")) %>%
 main <- ggplot() +
   geom_sf(data = continent,
           fill = "gray95",
-          color = "black") +
+          color = "black",
+          linewidth = 0.5) +
   geom_sf(data = countries,
           fill = "cadetblue",
-          color = "black") +
+          color = "black",
+          linewidth = 0.5) +
   geom_sf(data = pts,
           fill = "orange",
           color = "black",

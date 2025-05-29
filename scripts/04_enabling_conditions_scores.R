@@ -135,7 +135,10 @@ country_scores <- calculate_group_score(enabling_scores, "country") %>%
 #Absence of X is not a limiting condition. Instead, things like "rules that say you can't do X" are limitng conditons
 
 enabling_scores %>% 
-  mutate(ar_text = paste0("AR", ar, " - ", ar_text),
+  group_by(ar_text) %>% 
+  mutate(n_cases = n()) %>% 
+  ungroup() %>% 
+  mutate(ar_text = paste0("AR", ar, " - ", ar_text, " (N = ", n_cases, ")"),
          ar_text = fct_reorder(ar_text, ar, mean, .desc = T)) %>% 
   select(-c(case_code, ar, domain, iso3, domain_text, country, enabling_score)) %>% 
   group_by(ar_text) %>% 
@@ -165,20 +168,21 @@ enabling_scores %>%
 # X ----------------------------------------------------------------------------
 plot_scores <- function(data, group) {
   ggplot(data = data,
-         mapping = aes(x = {{group}}, y = mean_enabling_score / 12, size = n_cases)) +
-    geom_pointrange(aes(ymin = min / 12, ymax = max / 12), fatten = 1, size = 0) +
-    geom_hline(yintercept = mean(data$mean_enabling_score / 12, na.rm = T),
+         mapping = aes(x = {{group}}, y = mean_enabling_score, size = n_cases)) +
+    geom_pointrange(aes(ymin = min, ymax = max), fatten = 1, size = 0) +
+    geom_hline(yintercept = mean(data$mean_enabling_score, na.rm = T),
                linetype = "dashed") +
     geom_point(fill = "black",
                color = "black",
                shape = 21) +
-    geom_point(aes(y = n_conditions / 12),
+    geom_point(aes(y = n_conditions),
                fill = "red3",
                color = "black",
                shape = 22,
                size =1.5) +
     theme_bw() +
-    scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+    scale_y_continuous(limits = c(0, 12),
+                       breaks = seq(0, 12, by = 2)) +
     labs(x = "",
          y = "",
          size = "N") +
@@ -190,16 +194,14 @@ plot_scores <- function(data, group) {
     coord_flip()
 }
 
-ar_plot <- plot_scores(ar_scores, ar_text) +
-  labs(title = "A) By adaptive response")
+ar_plot <- plot_scores(ar_scores, ar_text)
 domain_plot <- plot_scores(domain_scores, domain_text) +
-  labs(title = "B) By domain")
+  labs(title = "A) By domain")
 country_plot <- plot_scores(country_scores, country) +
   labs(y = "Enabling score (Mean ± Range)",
-       title = "C) By country")
+       title = "B) By country")
 
-enabling_scores_plot <- plot_grid(ar_plot,
-                                  domain_plot,
+enabling_scores_plot <- plot_grid(domain_plot,
                                   country_plot,
                                   ncol = 1,
                                   align = "hv")
