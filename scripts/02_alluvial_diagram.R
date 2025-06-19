@@ -31,7 +31,8 @@ data <- read_csv(here("data","cases_master_sheet.csv")) %>%
                              country == "URY" ~ "Uruguay",
                              country == "ECU" ~ "Ecuador",
                              country == "PER" ~ "Peru",
-                             country == "MEX" ~ "Mexico")) %>% 
+                             country == "MEX" ~ "Mexico",
+                             country == "ARG" ~ "Argentina")) %>% 
   mutate(domain = case_when(domain == "a" ~ "Environmental",
                             domain == "b" ~ "Market",
                             domain == "c" ~ "Institutional",

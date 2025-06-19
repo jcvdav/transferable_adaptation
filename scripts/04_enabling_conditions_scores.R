@@ -169,7 +169,7 @@ enabling_scores %>%
 plot_scores <- function(data, group) {
   ggplot(data = data,
          mapping = aes(x = {{group}}, y = mean_enabling_score, size = n_cases)) +
-    geom_pointrange(aes(ymin = min, ymax = max), fatten = 1, size = 0) +
+    geom_linerange(aes(ymin = min, ymax = max), size = 0.5) +
     geom_hline(yintercept = mean(data$mean_enabling_score, na.rm = T),
                linetype = "dashed") +
     geom_point(fill = "black",
@@ -194,7 +194,12 @@ plot_scores <- function(data, group) {
     coord_flip()
 }
 
-ar_plot <- plot_scores(ar_scores, ar_text)
+
+ar_plot <- ar_scores |> 
+  mutate(ar_text = paste0(ar_text, " (N = ", n_cases, ")"),
+         ar_text = fct_reorder(ar_text, mean_enabling_score, mean, .desc = T)) %>% 
+  plot_scores(ar_text)
+  
 domain_plot <- plot_scores(domain_scores, domain_text) +
   labs(title = "A) By domain")
 country_plot <- plot_scores(country_scores, country) +
