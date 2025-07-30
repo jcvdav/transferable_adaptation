@@ -1,0 +1,40 @@
+AR,ISO3,CaseCode,,ClearlyDefinedVision,CollaborationAcrossJurisdictions,ConflictResolutionMechanisms,CoordinationWithGovernanceInst,EvidenceBasedDecisionMaking,KnowledgeIntegration,LongTermPoliticalWill,PublicParticipationWithFairness,RecogOfLocalOrIndigenousGovernance,SustainableFinancing,TransparencyAndCommunication,UpAndDownAccountability,,,,,,,,,,,,,
+,,,,3,15,4,5,16,6,5,6,10,12,5,7,,MEX,PER,URY,ECU,ARG,CHL,,Total,Count,Per Case,,
+1,MEX,1_a_MEX,6,,Y,,Y,Y,Y,,Y,Y,,,,,6,0,0,0,0,0,MEX,36,10,3.60,,
+1,MEX,1_d_MEX,2,,Y,,,,,,,Y,,,,,2,0,0,0,0,0,PER,21,6,3.50,,
+2,URY,2_a_URY,5,,Y,,,Y,,Y,,Y,,,Y,,0,0,5,0,0,0,URY,13,4,3.25,,
+2,ECU,2_a_ECU,1,,,,,Y,,,,,,,,,0,0,0,1,0,0,ECU,11,5,2.20,,
+2,ARG,2_a_ARG,1,,,,,Y,,,,,,,,,0,0,0,0,1,0,ARG,9,3,3.00,,
+2,ECU,2_b_ECU,5,,Y,,,Y,,,Y,,Y,Y,,,0,0,0,5,0,0,CHL,4,1,4.00,,
+2,MEX,2_b_MEX,3,,,,,Y,Y,,,,Y,,,,3,0,0,0,0,0,,,,,,
+2,MEX,2_b_MEX_2,3,,,,,Y,Y,,,,Y,,,,3,0,0,0,0,0,,,,,,
+2,PER,2_c_PER,6,,Y,Y,,Y,Y,,,,,Y,Y,,0,6,0,0,0,0,,,,,,
+3,MEX,3_c_MEX,5,,,,Y,,,,Y,,Y,Y,Y,,5,0,0,0,0,0,AdaptiveResponse,Total,Count,Per Case,,
+4,MEX,4_a_MEX,4,,Y,,,Y,Y,,,Y,,,,,4,0,0,0,0,0,1,8,2,4.00,,
+5,PER,5_a_PER,2,,,Y,,Y,,,,,,,,,0,2,0,0,0,0,2,24,7,3.43,,
+5,URY,5_a_URY,2,,,,,Y,,Y,,,,,,,0,0,2,0,0,0,3,5,1,5.00,,
+5,ARG,5_a_ARG,7,Y,Y,,Y,Y,,Y,Y,Y,,,,,0,0,0,0,7,0,4,4,1,4.00,,
+5,MEX,5_c_MEX,5,Y,Y,,,,Y,,Y,Y,,,,,5,0,0,0,0,0,5,23,7,3.29,,
+5,PER,5_c_PER,2,,Y,Y,,,,,,,,,,,0,2,0,0,0,0,6,7,2,3.50,,
+5,PER,5_c_PER_2,3,,,Y,Y,,,,,Y,,,,,0,3,0,0,0,0,7,10,3,3.33,,
+5,ECU,5_d_ECU,2,,,,,Y,,,,,,,Y,,0,0,0,2,0,0,8,1,1,1.00,,
+6,URY,6_a_URY,3,,Y,,,,,Y,,,Y,,,,0,0,3,0,0,0,9,6,2,3.00,,
+6,PER,6_b_PER,4,,Y,,,,,,Y,,Y,Y,,,0,4,0,0,0,0,10,0,3,0.00,,
+7,MEX,7_a_MEX,4,Y,Y,,,Y,,,,,,,Y,,4,0,0,0,0,0,,94,,,,
+7,MEX,7_b_MEX,2,,Y,,,,,,,Y,,,,,2,0,0,0,0,0,,,,,,
+7,CHL,7_c_CHL,4,,,,,Y,,,,Y,Y,,Y,,0,0,0,0,0,4,,,,,,
+8,ARG,8_b_ARG,1,,,,,,,,,,Y,,,,0,0,0,0,1,0,,,,,,
+9,MEX,9_c_MEX,2,,,,,,,,,,Y,,Y,,2,0,0,0,0,0,,,,,,
+9,PER,9_c_PER,4,,Y,,,,,,,Y,Y,Y,,,0,4,0,0,0,0,,,,,AR,SUM of 
+10,URY,10_a_URY,3,,,,Y,Y,,Y,,,,,,,0,0,3,0,0,0,,,,,,0
+10,ECU,10_b_ECU,1,,,,,,,,,,Y,,,,0,0,0,1,0,0,,,,,1,8
+10,ECU,10_b_ECU_2,2,,Y,,,,,,,,Y,,,,0,0,0,2,0,0,,,,,2,24
+,,,,,,,,,,,,,,,,,,,,,,,,,,,3,5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,5,23
+,,,,,,,,,,,,,,,,,,,,,,,,,,,6,7
+,,,,,,,,,,,,,,,,,,,,,,,,,,,7,10
+,,,,,,,,,,,,,,,,,,,,,,,,,,,8,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,9,6
+,,,,,,,,,,,,,,,,,,,,,,,,,,,10,6
+,,,,,,,,,,,,,,,,,,,,,,,,,,,Grand Total,94
