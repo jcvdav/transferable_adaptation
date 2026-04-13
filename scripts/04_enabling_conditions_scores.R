@@ -159,10 +159,12 @@ heatmap_plot <- enabling_scores %>%
                                frame.linewidth = 0.5,
                                ticks.colour = "black",
                                ticks.linewidth = 0.5)) +
+  coord_cartesian(clip = "off") +
   theme_minimal(base_size = 12) +
   theme(axis.title = element_blank(),
         axis.text.x = element_text(angle = 45,
-                                   hjust = 0))
+                                   hjust = 0,
+                                   vjust = 0))
 
 heatmap_plot
 
