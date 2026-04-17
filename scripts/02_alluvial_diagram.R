@@ -64,10 +64,10 @@ data <- read_csv(here("data","cases_master_sheet.csv")) %>%
 ## VISUALIZE ###################################################################
 
 # X ----------------------------------------------------------------------------
-ggplot(data = data,
+alluvial_diagram <- ggplot(data = data,
        mapping = aes(axis1 = domain,
-                     axis2 = ar_a,
-                     axis3 = country,
+                     axis2 = ar_a,#
+                     # axis3 = country,
            y = pct)) +
   geom_alluvium(aes(fill = str_remove_all(domain, " (.+)")),
                 color = "black",
@@ -80,7 +80,7 @@ ggplot(data = data,
   labs(x = "",
        y = "Percent of cases",
        fill = "Domain") +
-  scale_x_discrete(limits = c("Domain", "Adaptive Response", "Country"), expand = c(0, 0)) +
+  scale_x_discrete(limits = c("Domain", "Adaptive Response"), expand = c(0, 0)) +
   scale_y_continuous(labels = scales::percent, expand = c(0, 0)) +
   scale_fill_brewer(palette = "Set2", aesthetics = c("colour", "fill")) +
   theme_minimal(base_size = 12) +
@@ -88,7 +88,8 @@ ggplot(data = data,
         legend.title.position = "top",
         legend.box.spacing = unit(0, "pt"))
 
+alluvial_diagram
 
 ## EXPORT ######################################################################
 
-# X ----------------------------------------------------------------------------
+ggsave(here("figures", "alluvial_diagram.png"), plot = alluvial_diagram, width = 7, height = 6, dpi = 300)

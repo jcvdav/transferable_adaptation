@@ -134,7 +134,7 @@ country_scores <- calculate_group_score(enabling_scores, "country") %>%
 
 #Absence of X is not a limiting condition. Instead, things like "rules that say you can't do X" are limitng conditons
 
-enabling_scores %>% 
+heatmap_plot <- enabling_scores %>% 
   group_by(ar_text) %>% 
   mutate(n_cases = n()) %>% 
   ungroup() %>% 
@@ -159,11 +159,14 @@ enabling_scores %>%
                                frame.linewidth = 0.5,
                                ticks.colour = "black",
                                ticks.linewidth = 0.5)) +
+  coord_cartesian(clip = "off") +
   theme_minimal(base_size = 12) +
   theme(axis.title = element_blank(),
         axis.text.x = element_text(angle = 45,
-                                   hjust = 0))
-  
+                                   hjust = 0,
+                                   vjust = 0))
+
+heatmap_plot
 
 # X ----------------------------------------------------------------------------
 plot_scores <- function(data, group) {
@@ -216,4 +219,5 @@ enabling_scores_plot
 
 ## EXPORT ######################################################################
 
-# X ----------------------------------------------------------------------------
+ggsave(here("figures", "enabling_conditions_scores_heatmap.png"), plot = heatmap_plot, width = 10, height = 7, dpi = 300)
+ggsave(here("figures", "enabling_conditions_scores.png"), plot = enabling_scores_plot, width = 6, height = 8, dpi = 300)
