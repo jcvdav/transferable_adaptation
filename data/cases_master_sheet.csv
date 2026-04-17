@@ -1,0 +1,30 @@
+Case Code,AR,Domain,Country,Resource Units,Resource System,Governance System,Users,Lat,Lon
+1_a_MEX,1,a,MEX,Sea urchin,El Rosario,TURFs and Co-ops,SSFs from cooperatives,30.05,-115.72
+1_d_MEX,1,d,MEX,Queen conch,Banco Chinchorro,TURFs and Co-ops,SSFs,18.72,-87.7
+2_a_URY,2,a,URY,Yellow clam,Sandy Beach,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+2_a_ARG,2,a,ARG,Benthic invertebrates,Península de Valdés,Provincial government,SSFs,-42.322047,-64.388473
+2_a_ECU,2,a,ECU,Spiny lobster,Galapagos Islands,Managed Fishery (generalist permit),Generalist fishers (freediving and hookah),-0.26,-91.03
+2_b_ECU,2,b,ECU,Multispecies fisheries,Galapagos Islands,Co-managed rotational fisheries,SSFs and boat owners from co-ops,-0.26,-91.03
+2_b_MEX,2,b,MEX,Spiny lobster,Maria Elena,TURFs and Co-ops,Lobster fishers,19.409185,-87.515341
+2_b_MEX_2,2,b,MEX,Spiny lobster,Punta Herrero,TURFs and Co-ops,Lobster fishers,19.31292,-87.445797
+2_c_PER,2,c,PER,Squid,La Islilla,OSPA,Fishers and Processors,-5.21,-81.19
+3_c_MEX,3,c,MEX,Multispecies fisheries,Mexico,Federal Agency,Women Fishers,19.39,-99.14
+4_a_MEX,4,a,MEX,Benthic invertebrates,Isla Natividad,TURFs and Co-ops,SSFs,27.87,-115.2
+5_a_PER,5,a,PER,Demersal finfish,La Islilla,OSPA,SSFs,-5.21,-81.19
+5_a_URY,5,a,URY,Yellow clam,Sandy Beach,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+5_a_ARG,5,a,ARG,Benthic invertebrates,Península de Valdés,Provincial government,SSFs,-42.322047,-64.388473
+5_c_MEX,5,c,MEX,Bivalves/Finfish/Elasmobranchs,Puerto Libertad,Community-based management,SSFs,29.9,-112.73
+5_c_PER,5,c,PER,Multispecies fisheries,La Islilla,OSPAs & voluntary patrols,SSFs,-5.21,-81.19
+5_c_PER_2,5,c,PER,Multispecies fisheries,La Islilla,OSPAs & spatial gear control,SSFs,-5.21,-81.19
+5_d_ECU,5,d,ECU,Brown sea cucumber,Galapagos Islands,Co-managed no-take reserves,SSFs,-0.26,-91.03
+6_a_URY,6,a,URY,Yellow clam,Sandy Beach,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+6_b_PER,6,b,PER,Multispecies fisheries,Ancon,OSPAs,SSFs,-11.69,-77.19
+7_a_MEX,7,a,MEX,Benthic invertebrates,Isla Natividad,TURFs and Co-ops,SSFs,27.87,-115.2
+7_b_MEX,7,b,MEX,Benthic invertebrates,El Rosario,TURFs and Co-ops,SSFs,30.05,-115.72
+7_c_CHL,7,c,CHL,Tunicates/Bivalves/Macroalgae,Small-scale aquaculture,TURFs,SSFs,-33.47,-70.95
+8_b_ARG,8,b,ARG,Benthic invertebrates,Península de Valdés,Co-managed SSFs,SSFs,-42.322047,-64.388473
+9_c_MEX,9,c,MEX,Multispecies fisheries,Baja California,TURFs and Co-ops,SSFs,27.84,-115.1
+9_c_PER,9,c,PER,Multispecies fisheries,Peruvian fishing communities,OSPA,SSFs,-12.0262542,-77.1525875
+10_a_URY,10,a,URY,Yellow clam,Sandy Beach,Co-managed SSFs,SSF clam fishers’ network,-33.8,-53.5
+10_b_ECU,10,b,ECU,Spiny lobster,Galapagos Islands,Government-managed reserve,SSFs,-0.26,-91.03
+10_b_ECU_2,10,b,ECU,Multispecies fisheries,Santa Cruz Island,Fishing co-ops and trade associations,SSFs,-0.53,-90.37
